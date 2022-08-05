@@ -25,7 +25,7 @@
 
 - 把專案目錄裡src資料夾裡面的main.cpp的副檔名改成 .ino
 
-**`開啟當按`**
+**`開啟檔案`**
 
 - 用Arduino IDE點開 main.ino
 
