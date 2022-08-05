@@ -9,15 +9,11 @@ def findChecksum(SentMessage, k):
 
 	# Calculating the binary sum of packets
 	Sum = bin(int(c1, 2)+int(c2, 2)+int(c3, 2)+int(c4, 2))[2:]
-	print(int(Sum, 2))
 
 	# Adding the overflow bits
-	print(Sum)
 	if(len(Sum) > k):
 		x = len(Sum)-k
 		Sum = bin(int(Sum[0:x], 2)+int(Sum[x:], 2))[2:]
-		print(int(Sum, 2))
-		print(Sum)
 	if(len(Sum) < k):
 		Sum = '0'*(k-len(Sum))+Sum
 
@@ -28,7 +24,6 @@ def findChecksum(SentMessage, k):
 			Checksum += '0'
 		else:
 			Checksum += '1'
-	print(Checksum)
 	return Checksum
 
 # Function to find the Complement of binary addition of
@@ -45,10 +40,6 @@ def checkReceiverChecksum(ReceivedMessage, k, Checksum):
 	ReceiverSum = bin(int(c1, 2)+int(c2, 2)+int(Checksum, 2) +
 					int(c3, 2)+int(c4, 2)+int(Checksum, 2))[2:]
 
-	print(int(ReceiverSum, 2))
-	print(ReceiverSum)
-	print(int(Checksum, 2))
-	print(Checksum)
 	# Adding the overflow bits
 	if(len(ReceiverSum) > k):
 		x = len(ReceiverSum)-k
