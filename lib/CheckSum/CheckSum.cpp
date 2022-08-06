@@ -15,7 +15,7 @@ int getSplitSumNum(BoolArray *need_check, const int k, int start, int end)
     return Sum;
 }
 
-BoolArray *AddingOverflowBit(BoolArray *Overflow_BoolArray, int k)
+void AddingOverflowBit(BoolArray *Overflow_BoolArray, int k)
 {
     int x = Overflow_BoolArray->size() - k;
     int sum_tmp = 0;
